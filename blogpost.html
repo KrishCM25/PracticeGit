@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,37 +7,58 @@
     <title>Sanatorio Argentino</title>
     <link rel="stylesheet" href="../CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="contenedor">
-        <div class="contenedor-video">
-            <video id="video" loop autoplay preload muted poster="https://www.sanatorioallende.com/wp-content/themes/sanatorio/images/home/sanatorio.png">
-            <source src="https://www.sanatorioallende.com/wp-content/themes/sanatorio/videos/home-video.mp4" type="video/mp4"; codecs="avc1,mp4a" />
-            </video>
-        </div>
+    <div class="seccion-intro">
+        <div class="gradiente-intro"></div>
+        <section class="section-busqueda">
+            <label for="buscador">¿En qué podemos ayudarte?</label>
+            <div class="buscador-container">
+                <input id="buscador" class="buscador" type="text"placeholder="Turnos, Especialistas, Obras sociales, etc" >
+                <button type="submit">
+                    <img style="width: 20px;color:aliceblue;" src="../images/lupa.svg">
+                </button>
+            </div>
+        </section>
+        <section class="columna2">
+            
+        </section>
+    </div>
     <header class="header">
         <div class="logo">
-            <a href="https://youtu.be/r2fKH250nDk?t=141"><img src="https://www.sanatorioallende.com/wp-content/themes/sanatorio/images/logos/logo-sanatorio-blanco.png"/></a>
+            <a target="_blank" href="https://youtu.be/r2fKH250nDk?t=141"><img src="https://www.sanatorioallende.com/wp-content/themes/sanatorio/images/logos/logo-sanatorio-blanco.png"/></a>
         </div>
-            <nav class="menu">
-                <a href="#">Pacientes</a>
-                <a href="#">Profesionales</a>
-                <a href="#">Empresas</a>
-                <a href="#">Nosotros</a>
-            </nav>
         <p>Turnos Online</p>
+        <input id="btn-menu"type="checkbox">
+        <label for="btn-menu"><img src="../images/flecha_menu.svg"></label>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="#">Pacientes</a>
+                </li>
+                <li>
+                    <a href="#">Profesionales</a>
+                </li>
+                <li>
+                    <a href="#">Empresas</a>    
+                </li>
+                <li>
+                    <a href="#">Nosotros</a>
+                </li>
+            </ul>  
+        </nav>
     </header>
-    <section class="section-busqueda">
-        
-            <p >¿En qué podemos ayudarte?<br></p>
-            <input class="buscador" type="text" placeholder="Turnos, Especialistas, Obras sociales, etc">
-    </section>
-    <!-- <div>
+    
+    <footer class="footer-container">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eligendi voluptate adipisci optio hic. Voluptate labore quos fuga ipsa magni sapiente? Id, minus exercitationem nemo velit vel a quisquam voluptas?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eligendi voluptate adipisci optio hic. Voluptate labore quos fuga ipsa magni sapiente? Id, minus exercitationem nemo velit vel a quisquam voluptas?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eligendi voluptate adipisci optio hic. Voluptate labore quos fuga ipsa magni sapiente? Id, minus exercitationem nemo velit vel a quisquam voluptas?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eligendi voluptate adipisci optio hic. Voluptate labore quos fuga ipsa magni sapiente? Id, minus exercitationem nemo velit vel a quisquam voluptas?</p>
-    </div> -->
-    </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eligendi voluptate adipisci optio hic. Voluptate labore quos fuga ipsa magni sapiente? Id, minus exercitationem nemo velit vel a quisquam voluptas?</p>        <p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit. At eligendi voluptate adipisci optio hic. Voluptate labore quos fuga ipsa magni sapiente? Id, minus exercitationem nemo velit vel a quisquam voluptas?</p>
+        <button class="flecha">
+            <img src="../images/flecha-footer.svg">
+        </button>
+    </footer>
+
 </body>
 </html>

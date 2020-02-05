@@ -1,31 +1,86 @@
+*{
+    box-sizing: border-box;
+    text-align: center;
+    outline: none;
+}
+a{
+    text-decoration: none;
+            color: #fff;
+}
+button{
+    border: none;
+}
 body{
     margin: 0;
-}
-.contenedor{
+    font-size: 22px;
     font-family: 'Roboto', sans-serif;
-    font-size: 32px;
-    width: 100%;
-    height: 100%;
-    
- /* position: absolute; */
 }
-.contenedor-video{
-    width: 100%;
-    height: auto;
-    background: rgba(8, 162, 233, 0.164);
-    position: absolute;
-     /* z-index: 1; */
-}
-#video {
+.seccion-intro{
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 50% 1fr 1fr;
     position: relative;
-    /* left: 0;
-    border: none;
-    top: 0; */
-     width: 100%;
-    /* height: auto;  */
-    visibility: visible; 
-    z-index: -10;
+    width: 100%;
+    height: 100vh;
+    background: url("https://img.freepik.com/foto-gratis/bastante-doctora-mirando-otro-lado_23-2148396647.jpg?size=626&ext=jpg");
+    background-position-x: 200px;
+    background-size: 1300px;
+    background-attachment: fixed;
+}
+.section-busqueda {
+    grid-area: 2/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 10;
+    margin: 20px;
+    font-size: 1.5em;
+    color: #FFF;
+}
 
+    .buscador{
+        margin: 20px 0px 20px 20px;
+        width: 100%;
+        height: 3.1em;
+        font-size: 0.4em;
+        padding: 2px 20px;
+        border: 1px solid  rgb(0, 153, 255);
+        color: rgb(0, 153, 255);
+        transition: 0.2s;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+ 
+}
+    .buscador:hover{
+        box-shadow: 5px 5px 25px rgb(0, 204, 255);
+    }
+    .buscador-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+    }
+    .buscador-container button {
+        width: 41px;
+        height: 41px;
+        border: none;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color: rgb(0, 153, 255);
+        cursor: pointer;
+}
+.seccion-intro::before{
+    content: "";
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    background: linear-gradient(45deg , #72DDF7 1% , #fff);
+    opacity: 0.7;
+    z-index: 0;
+}
+.seccion-intro .columna2{
+    grid-area: 2/2;
 }
 .header{
     position: fixed;
@@ -33,86 +88,98 @@ body{
     right: 0;
     left: 0;
     z-index:100;
-    background-color: rgba(0, 0, 0, 0.438);
+    display: grid;
+    grid-template-columns: 260px 150px 1fr;
+    background-color: #8093F1;
 /*     box-shadow: 0px 0px 10px rgb(7, 26, 31); */
     /* background: linear-gradient(to right, rgb(0, 102, 255) 1% , rgba(238, 130, 238, 0.801) 87%, orange 2%); */
     padding:0 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* text-align: center; */
     text-transform: uppercase;
-    font-size: 0.48em;
+    font-size: 1rem;
 }
-
-    .logo img{
-        width: 185px;
-        margin: 10px 10px 0px 10px;
+.logo img{
+    /* min-width: 80%; */
+        margin-right: 20px;
+}
+    #btn-menu, header>label{
+        display: none;
+    }
+    .header>label img{
+        width: 18px;
+    }
+    .header>nav{
+        text-align: center;
     }
     .menu{
-        display: flex;
-        flex-wrap: wrap;
-        /* align-items: center; */
-        /* flex-basis: auto; */
-        width: 60%;
+        display: grid;
+        grid-template-columns:  repeat(4,1fr);
+        list-style: none;
+        padding: 0;
+        margin-top: 25px;
+        margin-left: 20px;
     }
         .menu a{
-            justify-content: center;
-            margin: auto;
-            padding: 0px 10px;
-            text-decoration: none;
-            color: #fff;
+            padding-bottom: 5px;
+            transition: 0.19s;
+            -webkit-transition: 0.19s;
+            -moz-transition: 0.19s;
+            -ms-transition: 0.19s;
+            -o-transition: 0.19s;
         }
         .menu a:hover{
-            font-weight: bold;
+            border-bottom: 1px solid #fff;
+            /* color: orange; */
         }
+
     .header>p{
-        
+        width: auto;
         text-align: center;
         cursor: pointer;
-        background-color: #ff8c00;
+        background-color:  #ff8c00;
         color: #fff;
-        padding: 10px 18px;
+        padding: 10px 10px;
         border-radius: 4px;
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
         -ms-border-radius: 4px;
         -o-border-radius: 4px;
-    }
-    .header>p:hover{
-        background-color: #2e2a25c7;
-        transition: .9s;
-        -webkit-transition: .9s;
-        -moz-transition: .9s;
-        -ms-transition: .9s;
-        -o-transition: .9s;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
 }
-.section-busqueda{
-    position: absolute;
-    width: auto;
-    
-    margin: 10% 30%;
-    font-size: 1.5em;
-    font-weight: 700px;
-    color: #fff;
-    text-align: center;
+    .header>p:hover{
+        background-color:#EC7B00;
+
 }
 
-    .buscador{
-        
-        width: 100%;
-        height: 3.1em;
-        font-size: 0.4em;
-        padding: 2px 20px;
-        border: 1px solid  rgb(0, 153, 255);
-        color: rgb(0, 153, 255);
-        outline: none;
-        border-radius: 25px;
-        -webkit-border-radius: 25px;
-        -moz-border-radius: 25px;
-        -ms-border-radius: 25px;
-        -o-border-radius: 25px;
+
+.parrafo{
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-family: 'Merriweather', serif;
 }
-    .buscador:hover{
-        box-shadow: 5px 5px 25px rgb(0, 204, 255);
-    }
+footer{
+    background-color: rgba(21, 164, 230, 0.589);
+    padding: 90px;
+}
+footer .flecha{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    cursor: pointer;
+}
+.flecha>img{
+    width: 30px;
+}
+.flecha:hover{
+    background-color: rgba(0, 112, 240, 0.822);
+}
