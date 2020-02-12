@@ -20,9 +20,9 @@ cambioColor3a.addEventListener('click',function color3(){
 
 imagenCambio1.addEventListener('click',(imagenColor1)=>{
  if(cambio){
-    imagenCambio1.style.width='300px';
-    imagenCambio1.style.top= '-40px';
+     imagenCambio1.style.top= '-60px';
     imagenCambio1.style.left= '-59px';
+    imagenCambio1.style.width='300px';
     cambio=false;
 }else{
     imagenCambio1.style.top= '0px';
@@ -33,12 +33,13 @@ imagenCambio1.addEventListener('click',(imagenColor1)=>{
 });
 //VARIABLES_IMAGEN2
 var imagenCambio2=window.document.getElementById("imagenColor2");
+var mouseOverTarget = document.getElementById('imagenColor2')
 //IMAGEN2
 imagenCambio2.addEventListener('click',(imagenColor2)=>{
     if(cambio){
-       imagenCambio2.style.width='300px';
-       imagenCambio2.style.top= '50px';
+       imagenCambio2.style.top= '40px';
        imagenCambio2.style.left= '-59px';
+       imagenCambio2.style.width='300px';
        cambio=false;
    }else{
        imagenCambio2.style.top= '12px';
@@ -46,6 +47,11 @@ imagenCambio2.addEventListener('click',(imagenColor2)=>{
        imagenCambio2.style.left= '65px';
        cambio=true;
    }
+   
+},true);
+mouseOverTarget.addEventListener('mouseover', function () {
+    'use strict';
+    imagenCambio2.removeEventListener('click',imagenCambio2,true);
 });
 //VARIABLES_IMAGEN3
 var cambioColor1c=window.document.getElementById("color1c");

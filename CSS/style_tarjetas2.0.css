@@ -108,6 +108,7 @@ body{
 
 }
 .tallas>p{
+    z-index: 10;
     width: 20px;
     background: #fce31b;
     margin: 3px;
@@ -125,6 +126,7 @@ body{
     align-items: center;
 }
 .c-colors .color{
+    z-index: 10;
     margin: 2px;
     width: 15px;
     height: 15px;
